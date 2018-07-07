@@ -1,0 +1,57 @@
+<html>
+	<head>
+    <script src="script.js">
+var cursors = 0
+function cookiefind() {
+    document.getElementById("cookies").innerHTML = cookies;
+}
+function cursorsfind() {
+  document.getElementById("cursors").innerHTML = cursors;
+}
+function cookersfind() {
+  document.getElementById("cookers").innerHTML = cookers;
+}
+function loadfind() {
+  document.getElementById("load").innerHTML = load;
+}
+function savefind() {
+  document.getElementById("save").innerHTML = save;
+}
+function ucfind() {
+  document.getElementById("uc").innerHTML = uc;
+}
+      
+    </script> 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121576896-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121576896-1');
+</script>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+	</head>
+	<body>
+    <button onclick="cookieClick(1)">Get a cookie!</button>
+		<br />
+		Cookies: <span id="cookies"></span>
+		<br />
+		<button onclick="buyCursor()">Buy Cursor</button>
+		<br />
+		Cursors: <span id="cursors">0</span>
+		<br />
+		Cursor Cost: <span id="cursorCost">10</span>
+    <br />
+    <button onclick="buyCooker()">Buy Cooker</button>     <button onclick="buyuc()">Buy Cooker Upgrade</button>
+		<br />
+    Cookers: <span id="cookers">0</span>	Cooker Upgrades: <span id="uc">0</span> 
+		<br />
+		Cooker Cost: <span id="cookerCost">35</span> 		Cooker Upgrade Cost: <span id="ucCost">60</span>
+    <br />
+    
+    <button onclick="load()">Load</button>           <button onclick="save()">Save</button>
+    <br /> <p id="website"> Changing websites soon.... </p>
+	</body>
+</html>
