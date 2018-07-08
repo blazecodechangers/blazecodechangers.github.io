@@ -54,8 +54,7 @@ function buyuc(){
     var nextucCost = Math.floor(60 * Math.pow(1.1,uc));       //works out the cost of the next cursor
     document.getElementById('ucCost').innerHTML = nextucCost;  //updates the cursor cost for the user
 }
-var cps = 0;
 window.setInterval(function(){
-  cookieClick(cursors + cookers * (3 * (upgradecookers + 1)));
-  
+  cookieClick(cursors);
+  cookieClick(cookers * 3 * uc);
 }, 1000);
