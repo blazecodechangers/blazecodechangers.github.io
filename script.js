@@ -56,5 +56,6 @@ function buyuc(){
 }
 window.setInterval(function(){
   cookieClick(cursors);
-  cookieClick(cookers * 3 * uc);
+  cookieClick(cookers * 3);
+  cookieClick(uc * cookers * 3);
 }, 1000);
