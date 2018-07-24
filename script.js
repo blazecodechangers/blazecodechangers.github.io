@@ -4,6 +4,11 @@ function cookieClick(number){
     cookies = cookies + number;
     document.getElementById("cookies").innerHTML = cookies;
 }
+function findunixtime(){
+unixtime = unixtime + 1 ;
+if unixtime > 15 then
+unixtime = 0;
+}
 function save(){
 var savegame = {
     cookies: cookies,
@@ -59,6 +64,6 @@ window.setInterval(function(){
   cookieClick(cursors);
   cookieClick(cookers * 3);
   cookieClick(uc * cookers * 3);
+  findunixtime();
 }, 1000);
-if unixtime > 15 then
-unixtime = 0;
+
