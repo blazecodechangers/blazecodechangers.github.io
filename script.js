@@ -20,6 +20,7 @@ if (typeof savegame.cookers !== "undefined") cookers = savegame.cookers;
 var cursors = 0;
 var cookers = 0;
 var uc = 0;
+var unixtime = 0;
 function buyCursor(){
     var CursorCost = Math.floor(10 * Math.pow(1.1,cursors));     //works out the cost of this cursor
     if(cookies >= cursorCost){                                   //checks that the player can afford the cursor
@@ -59,3 +60,5 @@ window.setInterval(function(){
   cookieClick(cookers * 3);
   cookieClick(uc * cookers * 3);
 }, 1000);
+if unixtime > 15 then
+unixtime = 0;
