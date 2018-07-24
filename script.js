@@ -64,6 +64,5 @@ window.setInterval(function(){
   cookieClick(cursors);
   cookieClick(cookers * 3);
   cookieClick(uc * cookers * 3);
-  findunixtime();
 }, 1000);
 
