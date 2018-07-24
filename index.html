@@ -20,6 +20,9 @@ function savefind() {
 function ucfind() {
   document.getElementById("uc").innerHTML = uc;
 }
+function unixfind() {
+  document.getElementById("unixtime").innerHTML = unixtime;
+}
       
     </script> 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -52,13 +55,14 @@ h1 {
 		<br />
 		Cursor Cost: <span id="cursorCost">10</span>
     <br />
-    <button onMouseDown="buyCooker()">Buy Cooker</button>     <button onMouseDown="buyuc()">Buy Cooker Upgrade</button> (doesn't work)
+    <button onMouseDown="buyCooker()">Buy Cooker</button>     <button onMouseDown="buyuc()">Buy Cooker Upgrade</button> 
 		<br />
     Cookers: <span id="cookers">0</span>	Cooker Upgrades: <span id="uc">0</span> 
 		<br />
 		Cooker Cost: <span id="cookerCost">35</span> 		Cooker Upgrade Cost: <span id="ucCost">60</span>
                 <br />
 		    <button onMouseDown="load()">Load</button>           <button onMouseDown="save()">Save</button> (warning, don't work)
+4 bit unit time: <span id=unixtime">0</span> 
  
 
 	</body>
