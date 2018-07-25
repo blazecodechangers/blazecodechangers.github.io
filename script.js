@@ -6,7 +6,7 @@ function cookieClick(number){
 }
 function findunixtime(){
 unixtime = unixtime + 1 ;
-if unixtime > 15 then
+if unixtime > 15
 unixtime = 0;
 }
 function save(){
