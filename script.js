@@ -1,7 +1,7 @@
 var cookies = 0;
 
-function cookieClick(number){
-    cookies = cookies + number;
+function cookieClick(){
+    cookies = cookies + 1 ;
     document.getElementById("cookies").innerHTML = cookies;
 }
 function findunixtime(){
