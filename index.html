@@ -1,6 +1,6 @@
 <html>
 	<head>
-    <script src="script.js">
+    <script> //finds stufff
 function cookiefind() {
   document.getElementById("cookies").innerHTML = cookies;
 }
@@ -73,26 +73,25 @@ function buyCursor(){
 }
 
 function buyCooker(){
-    var cookerCost = Math.floor(35 * Math.pow(1.1,cookers));     //works out the cost of this cursor
-    if(cookies >= cookerCost){                                   //checks that the player can afford the cursor
-        cookers = cookers + 1;                                   //increases number of cursors
-   cookies = cookies - cookerCost;                          //removes the cookies spent
-        document.getElementById('cookers').innerHTML = cookers;  //updates the number of cursors for the user
-        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
-    }
-    var nextCookerCost = Math.floor(35 * Math.pow(1.1,cookers));       //works out the cost of the next cursor
-    document.getElementById('cookerCost').innerHTML = nextCookerCost;  //updates the cursor cost for the user
+    var cookerCost = Math.floor(35 * Math.pow(1.1,cookers));    
+    if(cookies >= cookerCost){                                  
+        cookers = cookers + 1;                                   
+   cookies = cookies - cookerCost;                          
+        document.getElementById('cookers').innerHTML = cookers;  
+        document.getElementById('cookies').innerHTML = cookies;  
+    var nextCookerCost = Math.floor(35 * Math.pow(1.1,cookers));      
+    document.getElementById('cookerCost').innerHTML = nextCookerCost;  
 }
 function buyuc(){
-    var ucCost = Math.floor(60 * Math.pow(1.1,uc));     //works out the cost of this cursor
-    if(cookies >= ucCost){                                   //checks that the player can afford the cursor
-        uc = uc + 1;                                   //increases number of cursors
-   cookies = cookies - ucCost;                          //removes the cookies spent
-        document.getElementById('uc').innerHTML = uc;  //updates the number of cursors for the user
-        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+    var ucCost = Math.floor(60 * Math.pow(1.1,uc));    
+    if(cookies >= ucCost){                                   
+        uc = uc + 1;                                  
+   cookies = cookies - ucCost;                         
+        document.getElementById('uc').innerHTML = uc;  
+        document.getElementById('cookies').innerHTML = cookies;  
     }
-    var nextucCost = Math.floor(60 * Math.pow(1.1,uc));       //works out the cost of the next cursor
-    document.getElementById('ucCost').innerHTML = nextucCost;  //updates the cursor cost for the user
+    var nextucCost = Math.floor(60 * Math.pow(1.1,uc));      
+    document.getElementById('ucCost').innerHTML = nextucCost;  
 }
 window.setInterval(function(){
   cookieClick(cursors);
