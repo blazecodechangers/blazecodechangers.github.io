@@ -5,6 +5,11 @@ function cookieClick(){
     document.getElementById("cookies").innerHTML = cookies;
 };
 
+function cookieClick2(n){
+    cookies = cookies + n;
+    document.getElementById("cookies").innerHTML = cookies;
+};
+
 var cursors = 0;
 
 function buyCursor(){
@@ -34,7 +39,7 @@ function buycUp(){
 
 window.setInterval(function(){
 	
-	cookieClick(cursors);
+	cookieClick2(cursors);
 	
 }, 1000);
 
