@@ -1,7 +1,7 @@
 var cookies = 0;
 
 function cookieClick(){
-    cookies = cookies + cUpgrade + 1;
+    cookies = cookies + cUp + 1;
     document.getElementById("cookies").innerHTML = cookies;
 };
 
@@ -28,7 +28,7 @@ function buycUp(){
         document.getElementById('cUp').innerHTML = cUp;  //updates the number of cursors for the user
         document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
     };
-    var nextCostcUp = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
+    var nextCostcUp = Math.floor(30 * Math.pow(1.1,cUp));       //works out the cost of the next cursor
     document.getElementById('cUpCost').innerHTML = nextCostcUp;  //updates the cursor cost for the user
 };
 
