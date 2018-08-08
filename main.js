@@ -29,7 +29,7 @@ function buycUp(){
     var cUpCost = Math.floor(25 * Math.pow(1.1,cUp));     //works out the cost of this cursor
     if(cookies >= cUpCost){                                   //checks that the player can afford the cursor
         cUp = cUp + 1;                                   //increases number of cursors
-    	cookies = cookies - cUp;                          //removes the cookies spent
+    	cookies = cookies - cUpCost;                          //removes the cookies spent
         document.getElementById('cUpCost').innerHTML = cUp;  //updates the number of cursors for the user
         document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
     };
