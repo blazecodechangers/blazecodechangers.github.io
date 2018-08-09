@@ -30,16 +30,29 @@ function buycUp(){
     if(cookies >= cUpCost){                                   //checks that the player can afford the cursor
         cUp = cUp + 1;                                   //increases number of cursors
     	cookies = cookies - cUpCost;                          //removes the cookies spent
-        document.getElementById('cUpCost').innerHTML = cUp;  //updates the number of cursors for the user
+        document.getElementById('cUp').innerHTML = cUp;  //updates the number of cursors for the user
         document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
     };
     var nextCostcUp = Math.floor(30 * Math.pow(1.1,cUp));       //works out the cost of the next cursor
     document.getElementById('cUpCost').innerHTML = nextCostcUp;  //updates the cursor cost for the user
 };
 
+var upgradeC = 0;
+function buyupgradeC(){
+    var uCost = Math.floor(50 * Math.pow(2,upgradeC));     //works out the cost of this cursor
+    if(cookies >= uCost){                                   //checks that the player can afford the cursor
+        upgradeC = upgradeC + 1;                                   //increases number of cursors
+    	cookies = cookies - uCost;                          //removes the cookies spent
+        document.getElementById('upgradeC').innerHTML = upgradeC;  //updates the number of cursors for the user
+        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+    };
+    var nextCostc = Math.floor(50 * Math.pow(2,upgradeC));       //works out the cost of the next cursor
+    document.getElementById('uCost').innerHTML = nextCostc;  //updates the cursor cost for the user
+};
+
 window.setInterval(function(){
 	
-	cookieClick2(cursors);
+	cookieClick2(cursors * upgradeC);
 	
 }, 1000);
 
