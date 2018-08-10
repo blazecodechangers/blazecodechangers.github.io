@@ -52,7 +52,7 @@ function buyupgradeC(){
 
 window.setInterval(function(){
 	
-	cookieClick2(cursors * upgradeC);
+	cookieClick2(cursors * (upgradeC + 1));
 	
 }, 1000);
 
