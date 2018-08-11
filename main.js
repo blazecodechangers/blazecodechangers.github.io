@@ -10,6 +10,10 @@ function cookieClick1(n){
     document.getElementById("cookies").innerHTML = cookies;
 };
 
+function roundt1(){
+	math.round(cookies);
+}
+
 var cursors = 0;
 
 function save(){
@@ -35,6 +39,7 @@ function buyCursor(){
     };
     var nextCost = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
     document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
+    math.round(cursorCost);
 };
 
 var cUp = 0;
@@ -48,6 +53,7 @@ function buycUp(){
     };
     var nextCostcUp = Math.floor(30 * Math.pow(2,cUp));       //works out the cost of the next cursor
     document.getElementById('cUpCost').innerHTML = nextCostcUp;  //updates the cursor cost for the user
+	math.round(cUpCost);
 };
 
 var upgradeC = 0;
@@ -61,6 +67,7 @@ function buyupgradeC(){
     };
     var nextCostc = Math.floor(50 * Math.pow(2,upgradeC));       //works out the cost of the next cursor
     document.getElementById('uCost').innerHTML = nextCostc;  //updates the cursor cost for the user
+	math.round(uCost);
 };
 
 up1up = 1;
@@ -72,6 +79,7 @@ function up1(){
         document.getElementById('t2').innerHTML = t2;  
         document.getElementById('cookies').innerHTML = cookies;  
     };
+	math.round(up1Cost);
 };
 var cursor2 = 0;
 function buyCursor2(){
@@ -84,12 +92,16 @@ function buyCursor2(){
     };
     var next2Cost = Math.floor(10 * Math.pow(1.1,cursor2));       //works out the cost of the next cursor
     document.getElementById('cursor2Cost').innerHTML = next2Cost;  //updates the cursor cost for the user
+	math.round(cursor2Cost);
 };
+
 
 window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
 	localStorage.setItem("save",JSON.stringify(save));                                   
-	cookieClick1(cursor2);
+	cookieClick1(cursor2 * 25);
+	roundt1();
+	
 }, 1000);
 
