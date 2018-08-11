@@ -12,6 +12,19 @@ function cookieClick1(n){
 
 var cursors = 0;
 
+function save(){
+var save = {
+    cookies: cookies,
+    cursors: cursors,
+    cUp: cUp,
+	t2: t2,
+	up1up: up1up,
+	cursor2: cursor2
+}	
+}
+function load(){
+var savegame = JSON.parse(localStorage.getItem("save"));
+}
 function buyCursor(){
     var cursorCost = Math.floor(10 * Math.pow(1.1,cursors));     //works out the cost of this cursor
     if(cookies >= cursorCost){                                   //checks that the player can afford the cursor
@@ -60,10 +73,23 @@ function up1(){
         document.getElementById('cookies').innerHTML = cookies;  
     };
 };
+var cursor2 = 0;
+function buyCursor2(){
+    var cursor2Cost = Math.floor(10 * Math.pow(1.1,cursor2));     //works out the cost of this cursor
+    if(cookies >= cursor2Cost){                                   //checks that the player can afford the cursor
+        cursor2 = cursor2 + 1;                                   //increases number of cursors
+    	t2 = t2 - cursor2Cost;                          //removes the cookies spent
+        document.getElementById('cursor2').innerHTML = cursor2;  //updates the number of cursors for the user
+        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+    };
+    var next2Cost = Math.floor(10 * Math.pow(1.1,cursor2));       //works out the cost of the next cursor
+    document.getElementById('cursor2Cost').innerHTML = next2Cost;  //updates the cursor cost for the user
+};
 
 window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
+	localStorage.setItem("save",JSON.stringify(save));                                   
 	
 }, 1000);
 
