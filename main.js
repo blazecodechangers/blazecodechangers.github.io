@@ -11,7 +11,7 @@ function cookieClick1(n){
 };
 
 function roundt1(){
-	math.round(cookies);
+	Math.round(cookies);
 }
 
 var cursors = 0;
