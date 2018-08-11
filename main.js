@@ -50,9 +50,9 @@ function buyupgradeC(){
     document.getElementById('uCost').innerHTML = nextCostc;  //updates the cursor cost for the user
 };
 
-up1 = 1;
+up1up = 1;
 function up1(){
-    var up1Cost = 1000/up1;     
+    var up1Cost = 1000/up1up;     
     if(cookies >= up1Cost){                                  
         t2 = t2 + 1;                                   
     	cookies = cookies - up1Cost;                         
