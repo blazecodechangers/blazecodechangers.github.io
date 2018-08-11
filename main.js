@@ -90,6 +90,6 @@ window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
 	localStorage.setItem("save",JSON.stringify(save));                                   
-	
+	cookieClick1(cursor2);
 }, 1000);
 
