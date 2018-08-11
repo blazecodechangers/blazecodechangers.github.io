@@ -100,9 +100,13 @@ window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
 	localStorage.setItem("save",JSON.stringify(save));                                   
-	cookieClick1(cursor2 * 25);
 	roundt1();
 	cookies.toLocaleString('en') 
 	
 }, 1000);
 
+window.setInterval(function(){
+	
+	cookieClick1(cursor2);
+	
+}, 1000/25);
