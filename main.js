@@ -84,7 +84,7 @@ function up1(){
 var cursor2 = 0;
 function buyCursor2(){
     var cursor2Cost = Math.floor(10 * Math.pow(1.1,cursor2));     //works out the cost of this cursor
-    if(cookies >= cursor2Cost){                                   //checks that the player can afford the cursor
+    if(t2 >= cursor2Cost){                                   //checks that the player can afford the cursor
         cursor2 = cursor2 + 1;                                   //increases number of cursors
     	t2 = t2 - cursor2Cost;                          //removes the cookies spent
         document.getElementById('cursor2').innerHTML = cursor2;  //updates the number of cursors for the user
