@@ -1,1 +1,5 @@
-
+body { // styles applied to body tag
+  background-color: lightblue;
+  text-align: center;
+  font-size: 20px;
+}
