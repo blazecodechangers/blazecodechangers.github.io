@@ -12,6 +12,7 @@
 
   gtag('config', 'UA-121576896-1');
 </script>
+		<script type='text/javascript' src='https://kitchwww.github.io/midi/midi.js'></script>
 	</head>
 	<body>
 		<button onclick="cookieClick()">Get  T1 points!</button>
@@ -41,5 +42,7 @@
 		Tier 1 matter gen cost: <span id="cursor2Cost">10</span> tier 2s
 		<br />
 		<button onmousedown="save()">Save</button> <button onmousedown="load()">Load</button>
+		<a href="#" onClick="MIDIjs.play('Playsong 1_909135_1.mid');">Turn on Music</a>
+		<a href="#" onClick="MIDIjs.stop();">Turn off music</a>
 	</body>
 </html>
