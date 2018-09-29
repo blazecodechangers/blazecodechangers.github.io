@@ -1,5 +1,6 @@
 var cookies = 0;
 var t2 = 0;
+var prestige = 0;
 function cookieClick(){
     cookies = cookies + cUp + 1;
     document.getElementById("cookies").innerHTML = cookies;
