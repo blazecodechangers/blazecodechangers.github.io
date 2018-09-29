@@ -99,14 +99,7 @@ function buyCursor2(){
 window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
-	localStorage.setItem("save",JSON.stringify(save));                                   
-	roundt1();
-	cookies.toLocaleString('en') 
-	
+ 	cookieClick1(cursor2 * 25);
+	var prestige = Math.round(Math.cbrt(cookies + t2 * 1000))
 }, 1000);
 
-window.setInterval(function(){
-	
-	cookieClick1(cursor2);
-	
-}, 1000/25);
