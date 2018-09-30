@@ -101,6 +101,6 @@ window.setInterval(function(){
 	
 	cookieClick1(cursors * (upgradeC + 1));
  	cookieClick1(cursor2 * 25);
-	var prestige = Math.round(Math.cbrt(cookies + t2 * 1000))
+	var prestige = Math.round(Math.cbrt(cookies + (t2 * 1000)))
 }, 1000);
 
