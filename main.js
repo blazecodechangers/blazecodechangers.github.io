@@ -1,6 +1,7 @@
 var cookies = 0;
 var t2 = 0;
 var prestige = 0;
+var time = 0;
 function cookieClick(){
     cookies = cookies + cUp + 1;
     document.getElementById("cookies").innerHTML = cookies;
@@ -102,5 +103,6 @@ window.setInterval(function(){
 	cookieClick1(cursors * (upgradeC + 1));
  	cookieClick1(cursor2 * 25);
 	var prestige = Math.round(Math.cbrt(cookies + (t2 * 1000)))
+	var time = time + 1;
 }, 1000);
 
