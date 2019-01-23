@@ -108,8 +108,8 @@ window.setInterval(function(){
 }, 1000);
 
 function rebirth(){
-rbactive = rebirth;
-rebirth = 0;
+rbactive = prestige;
+prestige = 0;
 var cookies = 0;
 var t2 = 0;
 var prestige = 0;
