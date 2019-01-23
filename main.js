@@ -46,7 +46,7 @@ function buyCursor(){
 
 var cUp = 0;
 function buycUp(){
-    var cUpCost = Math.floor(30 * Math.pow(2,cUp));     //works out the cost of this cursor
+    var cUpCost = Math.floor(30 * Math.pow(1.25,cUp));     //works out the cost of this cursor
     if(cookies >= cUpCost){                                   //checks that the player can afford the cursor
         cUp = cUp + 1;                                   //increases number of cursors
     	cookies = cookies - cUpCost;                          //removes the cookies spent
@@ -100,10 +100,22 @@ function buyCursor2(){
 
 window.setInterval(function(){
 	
-	cookieClick1(cursors * (upgradeC + 1));
- 	cookieClick1(cursor2 * 25);
-	var prestige = Math.round(Math.cbrt(cookies + (t2 * 1000)))
+	cookieClick1(Math.round(cursors * (upgradeC + 1) * rbactive));
+ 	cookieClick1(cursor2 * 25 * rbactive);
+	var prestige = Math.round(10 / Math.sqrt(cookies + (t2 * 1000)))
 	document.getElementById('prestige').innerHTML = prestige;
 	var time = time + 1;
 }, 1000);
 
+function rebirth(){
+rbactive = rebirth;
+rebirth = 0;
+var cookies = 0;
+var t2 = 0;
+var prestige = 0;
+var time = 0;
+var cursor2 = 0;
+var cursor = 0;
+var upgradeC = 0;
+var cUp = 0;
+}
