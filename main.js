@@ -1,4 +1,5 @@
 var cookies = 0;
+var rbactive = 0;
 var t2 = 0;
 var prestige = 0;
 var time = 0;
