@@ -103,7 +103,7 @@ window.setInterval(function(){
 	
 	cookieClick1(Math.round(cursors * (upgradeC + 1) * (1 + rbactive)));
  	cookieClick1(cursor2 * 25 * (1 + rbactive));
-	var prestige = Math.round(10 / Math.sqrt(cookies + (t2 * 1000)))
+	var prestige = Math.round(10 * Math.cbrt(cookies + (t2 * 1000)))
 	document.getElementById('prestige').innerHTML = prestige;
 	var time = time + 1;
 }, 1000);
